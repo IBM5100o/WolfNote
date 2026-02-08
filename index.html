@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Grid Counter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Grid Counter</h1>
+
+  <div class="controls">
+    <label for="count">Number of boxes:</label>
+    <input type="number" id="count" min="1" max="100" value="8" />
+    <button id="apply">Apply</button>
+  </div>
+
+  <div id="grid" class="grid" aria-live="polite"></div>
+
+  <footer>
+    <p>Left click: -1, Right click: +1</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
