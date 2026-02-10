@@ -20,4 +20,4 @@ https://ibm5100o.github.io/WolfNote/
 
 1. 下載app.js、index.html、styles.css，放在同一個資料夾，然後開index.html就可以用了 (三個都純程式碼，有疑慮可以看一下內容)
 
-2. https://github.com/IBM5100o/WolfNote/releases，去這邊下載WolfNote.exe，優缺點裡面有講 (我個人是用這個)
+2. https://github.com/IBM5100o/WolfNote/releases ，去這邊下載WolfNote.exe，優缺點裡面有講 (我個人是用這個)
