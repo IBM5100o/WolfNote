@@ -1,23 +1,11 @@
-這是給人狼用的小工具，以下是網頁版:
+This is a note tool for Werewolves Game.
+
+You can set every player's score for helping you to remember which one is suspicious.
+
+The github.io url is below:
 
 https://ibm5100o.github.io/WolfNote/
 
-可以給每個人評分，起始為0，左鍵扣1，右鍵加1
+For use it in local, you can download this repo,
 
-算是快速筆記，記錄每個人的可疑程度
-
-優點有兩個:
-
-1. 快速，因為人狼常常需要快速決策
-
-2. 量化，例如同時有兩個人很可疑，但是無法決定時，看一下分數發現一個-5，一個-4，那可以先吊-5的
-
-我個人是記事本搭配這個使用，有看到奇怪的點再去點一下就好，沒事不用理它，盡量別浪費時間
-
-通常是無法決策時拿來參考，不要過度依賴，大概是這樣
-
-另外不想用網頁版，本地端有兩種方法:
-
-1. 下載app.js、index.html、styles.css，放在同一個資料夾，然後開index.html就可以用了 (三個都純程式碼，有疑慮可以看一下內容)
-
-2. https://github.com/IBM5100o/WolfNote/releases ，去這邊下載WolfNote.exe，優缺點裡面有講 (我個人是用這個)
+And put them in same directory, then open index.html.
