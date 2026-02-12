@@ -68,16 +68,5 @@ setNamesBtn.addEventListener('click', () => {
   playerNames = [];
 });
 
-// keyboard support: Enter decreases, Shift+Enter increases
-gridEl.addEventListener('keydown', (e) => {
-  const target = e.target;
-  if (!target || !target.classList.contains('cell')) return;
-  if (e.key === 'Enter' && !e.shiftKey) {
-    target.textContent = (parseInt(target.textContent || '0', 10) - 1).toString();
-  } else if (e.key === 'Enter' && e.shiftKey) {
-    target.textContent = (parseInt(target.textContent || '0', 10) + 1).toString();
-  }
-});
-
 // build initial
 buildGrid(Number(countInput.value));

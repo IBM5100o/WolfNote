@@ -21,6 +21,7 @@ https://ibm5100o.github.io/WolfNote/
 另外不想用網頁版，本地端有兩種方法:
 
 1. 下載app.ico、app.js、index.html、styles.css，放在同一個資料夾，然後開index.html就可以用了
-(但這樣跟網頁版差不多，一樣都是用瀏覽器開)
+
+    (但這樣跟網頁版差不多，一樣都是用瀏覽器開)
 
 2. 自己編譯C#版本的，exe我就不放了
