@@ -95,6 +95,10 @@ namespace WolfNote
                         playerNames.Add(part[1..]);
                         flag = 1;
                     }
+                    else
+                    {
+                        flag = 0;
+                    }
                 }
                 else
                 {

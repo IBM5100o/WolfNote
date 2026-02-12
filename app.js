@@ -56,6 +56,8 @@ setNamesBtn.addEventListener('click', () => {
       if (flag === 0) {
         playerNames.push(part.substring(1));
         flag = 1;
+      } else {
+        flag = 0;
       }
     } else {
       flag = 0;
