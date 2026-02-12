@@ -4,6 +4,8 @@ https://ibm5100o.github.io/WolfNote/
 
 可以給每個人評分，起始為0，左鍵扣1，右鍵加1
 
+玩家名稱就直接連頭像一起複製貼上就好，parse有問題的話可以回報給我
+
 算是快速筆記，記錄每個人的可疑程度
 
 優點有兩個:
@@ -19,5 +21,6 @@ https://ibm5100o.github.io/WolfNote/
 另外不想用網頁版，本地端有兩種方法:
 
 1. 下載app.ico、app.js、index.html、styles.css，放在同一個資料夾，然後開index.html就可以用了
+(但這樣跟網頁版差不多，一樣都是用瀏覽器開)
 
-2. https://github.com/IBM5100o/WolfNote/releases ，去這邊下載WolfNote.zip，優缺點裡面有講 (我個人是用這個)
+2. 自己編譯C#版本的，exe我就不放了
