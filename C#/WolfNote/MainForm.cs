@@ -4,10 +4,13 @@ namespace WolfNote
     {
         private NumericUpDown numericCount;
         private Button btnApply;
+        private Button btnRandom;
+        private Label lblRandomResult;
         private Panel panelGrid;
         private Button btnParse;
         private TextBox userText;
         private List<string> playerNames;
+        private Random rng;
 
         public MainForm()
         {
@@ -33,6 +36,13 @@ namespace WolfNote
             btnApply.Click += BtnApply_Click;
             Controls.Add(btnApply);
 
+            btnRandom = new Button { Text = "Random", Location = new Point(300, 8) };
+            btnRandom.Click += BtnRandom_Click;
+            Controls.Add(btnRandom);
+
+            lblRandomResult = new Label { Text = string.Empty, Location = new Point(380, 13), AutoSize = true };
+            Controls.Add(lblRandomResult);
+
             panelGrid = new Panel { Location = new Point(10, 50), AutoScroll = true, Width = ClientSize.Width - 20, Height = ClientSize.Height - 60, Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right };
             Controls.Add(panelGrid);
 
@@ -54,7 +64,8 @@ namespace WolfNote
             btnParse.Click += BtnParse_Click;
             Controls.Add(btnParse);
 
-            playerNames = [];
+            playerNames = new List<string>();
+            rng = new Random();
 
             Shown += MainForm_Shown;
             Resize += MainForm_Resize;
@@ -78,10 +89,10 @@ namespace WolfNote
 
         private void BtnParse_Click(object? sender, EventArgs e)
         {
-            playerNames = [];
+            playerNames = new List<string>();
             string input = userText.Text;
             var parts = input
-                .Split(['\t', '\r', '\n'], StringSplitOptions.RemoveEmptyEntries)
+                .Split(new[] { '\t', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(s => s.Trim())
                 .Where(s => s.Length > 0)
                 .ToList();
@@ -107,7 +118,20 @@ namespace WolfNote
             }
             BuildGrid((int)numericCount.Value);
             userText.Text = string.Empty;
-            playerNames = [];
+            playerNames = new List<string>();
+        }
+
+        private void BtnRandom_Click(object? sender, EventArgs e)
+        {
+            int n = (int)numericCount.Value;
+            if (n <= 0)
+            {
+                lblRandomResult.Text = string.Empty;
+                return;
+            }
+
+            int val = rng.Next(1, n + 1);
+            lblRandomResult.Text = val.ToString();
         }
 
         private void BuildGrid(int count)

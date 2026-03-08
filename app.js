@@ -3,6 +3,7 @@ const countInput = document.getElementById('count');
 const applyBtn = document.getElementById('apply');
 const namesTextarea = document.getElementById('names');
 const setNamesBtn = document.getElementById('setNames');
+const randomBtn = document.getElementById('random');
 
 let playerNames = [];
 
@@ -45,8 +46,13 @@ function buildGrid(count) {
 
 applyBtn.addEventListener('click', () => buildGrid(Number(countInput.value)));
 
+randomBtn.addEventListener('click', () => {
+  let rng = Math.floor(Math.random() * Number(countInput.value)) + 1;
+  document.getElementById('result').textContent = rng.toString();
+});
+
 setNamesBtn.addEventListener('click', () => {
-  // parse similarly to the C# logic: split on tabs/newlines, look for parts starting with '¡»'
+  // parse similarly to the C# logic: split on tabs/newlines, look for parts starting with '◆'
   const text = namesTextarea.value || '';
   const parts = text.split(/\t|\r?\n/).map(s => s.trim()).filter(s => s.length > 0);
   playerNames = [];
